@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import FormClass from "./formClass";
+import ShoppingList from "./shoppingList";
 class App extends Component {
   render() {
-    return <FormClass />;
+    return <ShoppingList />;
   }
 }
 
