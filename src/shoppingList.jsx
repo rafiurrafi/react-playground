@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ShoppingForm from "./shoppingForm";
 class ShoppingList extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +9,12 @@ class ShoppingList extends Component {
         { name: "Egg", amount: "10 Kg" },
       ],
     };
+    this.handleAddItem = this.handleAddItem.bind(this);
+  }
+  handleAddItem(item) {
+    const NewItems = this.state.items;
+    NewItems.push(item);
+    this.setState({ items: NewItems });
   }
   render() {
     const styles = {
@@ -29,6 +36,7 @@ class ShoppingList extends Component {
             </li>
           ))}
         </ul>
+        <ShoppingForm onAddItem={this.handleAddItem} />
       </div>
     );
   }
