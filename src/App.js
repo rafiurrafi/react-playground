@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Toggler from "./100. todolist/toggler";
+import FormGroups from "./100. todolist/formGroups";
 class App extends Component {
   render() {
     return (
       <div>
-        <Toggler />
+        <FormGroups />
       </div>
     );
   }
