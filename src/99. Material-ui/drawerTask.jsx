@@ -26,7 +26,7 @@ const DrawerTask = (props) => {
         <Grid item>
           <Drawer open={open} onClose={() => setOpen(false)}>
             <List>
-              <ListItem button>
+              <ListItem button onClick={() => setOpen(false)}>
                 <ListItemText>Home</ListItemText>
               </ListItem>
             </List>
