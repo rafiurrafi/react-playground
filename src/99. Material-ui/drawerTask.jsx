@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Drawer from "@material-ui/core/Drawer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -12,14 +12,28 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
 
 const DrawerTask = (props) => {
+  const [open, setOpen] = useState(false);
   return (
-    <AppBar>
-      <Toolbar>
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
-    </AppBar>
+    <div>
+      <AppBar>
+        <Toolbar>
+          <IconButton color="inherit" onClick={() => setOpen(true)}>
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Grid container>
+        <Grid item>
+          <Drawer open={open} onClose={() => setOpen(false)}>
+            <List>
+              <ListItem button>
+                <ListItemText>Home</ListItemText>
+              </ListItem>
+            </List>
+          </Drawer>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
 
