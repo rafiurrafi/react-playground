@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Card from "./1. birthday-reminder/components/card";
+import Cards from "./1. birthday-reminder/components/cards";
 class App extends Component {
   render() {
     return (
       <div>
-        <Card />
+        <Cards />
       </div>
     );
   }

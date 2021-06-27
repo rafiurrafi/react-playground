@@ -1,0 +1,21 @@
+.cards {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  /* padding: 20px 0; */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.cards .card {
+  margin: 10px 0;
+}
+.btn {
+  width: 80%;
+  display: inline-block;
+  align-self: center;
+  text-decoration: none;
+  cursor: pointer;
+}
