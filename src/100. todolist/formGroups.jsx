@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import useForm from "./hooks/useForm";
 const FormGroups = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  const [name, setName] = useForm("");
+  const [email, setEmail] = useForm("");
+  //   const handleNameChange = (e) => {
+  //     setName(e.target.value);
+  //   };
+  //   const handleEmailChange = (e) => {
+  //     setEmail(e.target.value);
+  //   };
   const handleSubmit = () => {};
   return (
     <div>
@@ -24,7 +25,7 @@ const FormGroups = () => {
             placeholder="Name"
             name="name"
             value={name}
-            onChange={handleNameChange}
+            onChange={setName}
           />
         </div>
         <div>
@@ -34,7 +35,7 @@ const FormGroups = () => {
             placeholder="Email"
             name="email"
             value={email}
-            onChange={handleEmailChange}
+            onChange={setEmail}
           />
         </div>
         <button>Submit</button>
