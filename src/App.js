@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import FormGroups from "./100. todolist/formGroups";
+import Card from "./1. birthday-reminder/components/card";
 class App extends Component {
   render() {
     return (
       <div>
-        <FormGroups />
+        <Card />
       </div>
     );
   }
